@@ -65,12 +65,16 @@ def AddView(request):
         x=encryption(data1)
         result=json.loads(x[0])
         key=x[1]
+        y=decryption(x[0])
+        print(y)
     else:
         var=[{"status code":404,"Status_message":"The record failed to store in database"}]
         data1=bytes(str(var),'utf-8')
         x=encryption(data1)
         result=json.loads(x[0])
         key=x[1]
+        y=decryption(x[0])
+        print(y)
     return Response(result)
 
 #VIEWING ALL THE OBJECTS IN RESTAURANT MODEL
